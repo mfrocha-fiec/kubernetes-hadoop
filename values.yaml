@@ -26,7 +26,7 @@ hdfs:
     # Will be used as dfs.datanode.hostname
     # You still need to set up services + ingress for every DN
     # Datanodes will expect to
-    externalHostname: example.com
+    externalHostname: 10.168.165.46
     externalDataPortRangeStart: 50500
     externalHTTPPortRangeStart: 51000
 

@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/component: hdfs-dn
 spec:
   ports:
-  - name: dfs
+  - name: bri-dfs
     port: 9000
     protocol: TCP
   - name: webhdfs  

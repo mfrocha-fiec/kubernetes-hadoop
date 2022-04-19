@@ -1,0 +1,6 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+spec:
+  backend:
+    serviceName: {{ include "hadoop.fullname" . }}-hdfs-dn
+    servicePort: 51001

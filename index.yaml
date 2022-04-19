@@ -19,6 +19,6 @@ entries:
     - https://github.com/mfrocha-fiec/kubernetes-hadoop
     - https://github.com/apache/hadoop
     urls:
-    - https://mfrocha-fiec.github.io/kubernetes-hadoop/docs/hadoop-1.0.0.tgz
+    - https://mfrocha-fiec.github.io/kubernetes-hadoop/hadoop-1.0.0.tgz
     version: 1.0.0
 generated: "2022-04-19T17:19:54.074667504-03:00"

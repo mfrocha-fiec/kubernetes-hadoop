@@ -13,11 +13,11 @@ spec:
   - name: dfs
     port: 9000
     protocol: TCP
-    nodePort: 50500
+    nodePort: 30000
   - name: webhdfs
     port: 9864
     protocol: TCP
-    nodePort: 51000
+    nodePort: 32000
   type: NodePort     
   selector:
     app.kubernetes.io/name: {{ include "hadoop.name" . }}

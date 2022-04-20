@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/component: hdfs-dn
 spec:
   ports:
-  {{- range $k, $v := until (int64 .Values.hdfs.dataNode.replicas) }}
+  {{- range $k, $v := until (int .Values.hdfs.dataNode.replicas) }}
 
   - name: dfs-{{$v}}
     port: {{add (int64 .Values.hdfs.dataNode.externalHTTPPortRangeStart) $v}}

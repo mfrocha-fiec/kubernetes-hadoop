@@ -1,6 +1,6 @@
 image:
-  repository: docker.io/matheus195/apache-hadoop-k8s
-  tag: 3.3.2
+  repository: matheus195/apache-hadoop-k8s
+  tag: latest
   pullPolicy: IfNotPresent
 
 # The version of the hadoop libraries being used in the image.

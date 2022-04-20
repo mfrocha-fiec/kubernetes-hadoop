@@ -186,7 +186,7 @@ data:
 
       <property>
         <name>dfs.datanode.address</name>
-        <value>{{ .Values.hdfs.dataNode.externalHostname }}:EXTERNAL_DATA_PORT_REPLACEME</value>
+        <value>0.0.0.0:EXTERNAL_DATA_PORT_REPLACEME</value>
       </property>
 
       <property>

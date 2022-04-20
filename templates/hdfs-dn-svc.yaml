@@ -11,7 +11,7 @@ metadata:
 spec:
   ports:
   - name: dfs
-    port: 9867
+    port: 9866
     protocol: TCP
     nodePort: 30000
   - name: webhdfs

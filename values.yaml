@@ -1,5 +1,5 @@
 image:
-  repository: matheus195/apache-hadoop-k8s
+  repository: docker.io/matheus195/apache-hadoop-k8s
   tag: 3.3.2
   pullPolicy: IfNotPresent
 

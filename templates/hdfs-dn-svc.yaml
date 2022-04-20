@@ -16,6 +16,10 @@ spec:
     port: {{add (int $.Values.hdfs.dataNode.externalHTTPPortRangeStart) $v}}
     protocol: TCP
     nodePort: {{add (int $.Values.hdfs.dataNode.externalHTTPPortRangeStart) $v }}
+  - name: ipc-{{$v}}
+    port: {{add (int $.Values.hdfs.dataNode.externalIPCRangeStart) $v}}
+    protocol: TCP
+    nodePort: {{add (int $.Values.hdfs.dataNode.externalIPCRangeStart) $v }}
   - name: webhdfs-{{$v}}
     port: {{add (int $.Values.hdfs.dataNode.externalDataPortRangeStart) $v }}
     protocol: TCP

@@ -26,8 +26,9 @@ hdfs:
     # Will be used as dfs.datanode.hostname
     # You still need to set up services + ingress for every DN
     # Datanodes will expect to
-    externalHostname: kubernetes-master
+    externalHostname: 10.168.165.46
     externalDataPortRangeStart: 30000
+    externalIPCRangeStart: 31000
     externalHTTPPortRangeStart: 32000
 
     replicas: 1

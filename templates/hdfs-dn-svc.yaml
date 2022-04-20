@@ -13,13 +13,13 @@ spec:
   {{- range $k, $v := until (int .Values.hdfs.dataNode.replicas) }}
 
   - name: dfs-{{$v}}
-    port: {{ .Values.hdfs.dataNode.externalHTTPPortRangeStart + $v}}
+    port: {{add .Values.hdfs.dataNode.externalHTTPPortRangeStart $v}}
     protocol: TCP
-    nodePort: {{ .Values.hdfs.dataNode.externalHTTPPortRangeStart + $v }}
+    nodePort: {{add .Values.hdfs.dataNode.externalHTTPPortRangeStart $v }}
   - name: webhdfs-{{$v}}
-    port: {{ .Values.hdfs.dataNode.externalDataPortRangeStart + $v }}
+    port: {{add .Values.hdfs.dataNode.externalDataPortRangeStart $v }}
     protocol: TCP
-    nodePort: {{ .Values.hdfs.dataNode.externalDataPortRangeStart + $v }}
+    nodePort: {{add .Values.hdfs.dataNode.externalDataPortRangeStart $v }}
 
   {{ -end }}
   type: NodePort     

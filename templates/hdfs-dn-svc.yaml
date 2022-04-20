@@ -13,15 +13,16 @@ spec:
   {{- range $k, $v := until (int .Values.hdfs.dataNode.replicas) }}
 
   - name: dfs-{{$v}}
-    port: {{add (int64 .Values.hdfs.dataNode.externalHTTPPortRangeStart) $v}}
+    port: {{add (int $.Values.hdfs.dataNode.externalHTTPPortRangeStart) $v}}
     protocol: TCP
-    nodePort: {{add (int64 .Values.hdfs.dataNode.externalHTTPPortRangeStart) $v }}
+    nodePort: {{add (int $.Values.hdfs.dataNode.externalHTTPPortRangeStart) $v }}
   - name: webhdfs-{{$v}}
-    port: {{add (int64 .Values.hdfs.dataNode.externalDataPortRangeStart) $v }}
+    port: {{add (int $.Values.hdfs.dataNode.externalDataPortRangeStart) $v }}
     protocol: TCP
-    nodePort: {{add (int64 .Values.hdfs.dataNode.externalDataPortRangeStart) $v }}
+    nodePort: {{add (int $.Values.hdfs.dataNode.externalDataPortRangeStart) $v }}
 
   {{- end }}
+
   type: NodePort     
   selector:
     app.kubernetes.io/name: {{ include "hadoop.name" . }}

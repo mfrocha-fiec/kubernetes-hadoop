@@ -214,11 +214,11 @@ data:
       <!-- Bind to all interfaces -->
       <property>
         <name>dfs.namenode.rpc-bind-host</name>
-        <value>{{ .Values.hdfs.dataNode.externalHostname }}</value>
+        <value>10.168.165.46</value>
       </property>
       <property>
         <name>dfs.namenode.servicerpc-bind-host</name>
-        <value>{{ .Values.hdfs.dataNode.externalHostname }}</value>
+        <value>10.168.165.46</value>
       </property>
       <!-- /Bind to all interfaces -->
 

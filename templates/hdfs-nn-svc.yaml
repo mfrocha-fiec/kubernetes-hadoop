@@ -11,12 +11,14 @@ metadata:
 spec:
   ports:
   - name: dfs
-    port: 9000
     protocol: TCP
+    port: 9000
+    targetPort: 9000
     nodePort: 31900
   - name: webhdfs
-    port: 9870
     protocol: TCP
+    port: 9870
+    targetPort: 9870
     nodePort: 31987
   type: NodePort  
   selector:

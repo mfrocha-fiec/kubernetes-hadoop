@@ -13,7 +13,7 @@ spec:
   {{- range $k, $v := until (int .Values.hdfs.dataNode.replicas) }}
 
   - name: dfs-{{$v}}
-    port: {{add (int .Values.hdfs.dataNode.externalHTTPPortRangeStart) $v}}
+    port: $(({{ .Values.hdfs.dataNode.externalHTTPPortRangeStart }} + $v))
     protocol: TCP
     nodePort: {{add (int .Values.hdfs.dataNode.externalHTTPPortRangeStart) $v }}
   - name: webhdfs-{{$v}}
